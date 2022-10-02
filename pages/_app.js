@@ -1,12 +1,17 @@
 import '../styles/globals.css'
 import { Box } from '@mui/material'
 import Navbar from "../components/Navbar/Navbar";
+import UsedBy from '../components/usedBy/UsedBy';
+import { DetailContextProvider } from '../context/detailsContext';
 
 function MyApp({ Component, pageProps }) {
   return (
     <Box>
       <Navbar />
-      <Component {...pageProps} />
+      <DetailContextProvider>
+        <Component {...pageProps} />
+      </DetailContextProvider>
+      <UsedBy />
     </Box>
   )
 }

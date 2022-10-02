@@ -1,7 +1,6 @@
 export const styles = {
   simpleTaskSection: (theme) => ({
     width: "100vw",
-    // height: "70vh",
     height: "auto",
     display: "flex",
     alignItems: "center",
@@ -39,7 +38,6 @@ export const styles = {
   }),
   title: (theme) => ({
     color: "#000",
-    fontSize: "5em",
     marginBottom: "0.5em",
     fontWeight: "10",
     [theme.breakpoints.down("lg")]: {

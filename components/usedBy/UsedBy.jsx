@@ -1,5 +1,5 @@
 import { styles } from "./UsedByStyle";
-import logo from "../../../image/team..png";
+import logo from "../../image/team..png";
 import { Box, CardMedia, Typography } from "@mui/material";
 
 const UsedBy = () => {
