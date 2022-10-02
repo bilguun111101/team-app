@@ -61,10 +61,13 @@ const LogIn = () => {
             <Button
               type="submit"
               fullWidth
-              variant="contained"
+              variant="contained" 
               sx={{ mt: 3, mb: 2, backgroundColor: "#000" }}
             >
-              Log In
+              <Link href='/detail'>
+                Log In
+              </Link>
+              {/* Log In */}
             </Button>
             <Grid container>
               <Grid item xs>

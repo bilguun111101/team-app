@@ -17,7 +17,7 @@ const YourHub = () => {
     <Box sx={styles.yourHubSection}>
       <Typography variant="div" sx={styles.yourHubDocument}>
         <Typography
-          variant="h1"
+          variant="h2"
           color="primary"
           sx={styles.yourHubSmallDocument}
         >

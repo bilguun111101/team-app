@@ -10,7 +10,7 @@ const SimpleTask = () => {
         <Image src={img} />
       </Box>
       <Box sx={styles.imageSection}>
-        <Typography variant="h1" sx={styles.title}>
+        <Typography variant="h2" sx={styles.title}>
           Simple task management
         </Typography>
         <Typography variant="h5" sx={styles.text}>
