@@ -1,11 +1,17 @@
 export const styles = {
   simpleTaskSection: (theme) => ({
     width: "100vw",
-    height: "70vh",
+    // height: "70vh",
+    height: "auto",
     display: "flex",
-    padding: "7em 0",
+    alignItems: "center",
+    padding: "10em 0",
+    marginTop: "5em",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
+      marginTop: "0",
+      padding: "4em 0",
+      height: "auto"
     },
   }),
   documentSection: (theme) => ({
@@ -26,6 +32,7 @@ export const styles = {
     paddingRight: "140px",
     paddingLeft: "3em",
     [theme.breakpoints.down("md")]: {
+      paddingRight: "3em",
       marginTop: "2em",
       width: "100%",
     },

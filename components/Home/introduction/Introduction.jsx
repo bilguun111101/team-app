@@ -1,11 +1,8 @@
 import { styles } from "./introductionStyle";
 import {
   Box,
-  Input,
-  AppBar,
   Button,
   TextField,
-  CardMedia,
   Container,
   Typography,
 } from "@mui/material";
