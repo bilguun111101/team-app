@@ -32,6 +32,7 @@ export const styles = {
     },
   }),
   introduction: (theme) => ({
+    width: "100%",
     height: "100vh",
     padding: "0 140px",
     position: "relative",
@@ -41,9 +42,9 @@ export const styles = {
   }),
   title: (theme) => ({
     fontWeight: "10",
-    fontSize: "80px",
+    fontSize: "70px",
     [theme.breakpoints.down("lg")]: {
-      fontSize: "70px",
+      fontSize: "60px",
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "50px",
