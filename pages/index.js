@@ -1,26 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import background from "./image/homeWoman.png";
 import {
-  Box,
-  Input,
-  AppBar,
-  Button,
-  TextField,
-  CardMedia,
-  Container,
-  Typography,
+  Box, Button,
 } from "@mui/material";
-import Introduction from "./components/Home/introduction/Introduction";
-import YourHub from "./components/Home/yourHub/YourHub";
-import SimpleTask from "./components/Home/SimpleTask/SimpleTask";
+import { useRouter } from "next/router";
+import HomePage from "../components/Home/HomePage";
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <Box>
-      <Introduction />
-      <YourHub />
-      {/* <SimpleTask /> */}
-    </Box>
+      <HomePage />
   );
 }

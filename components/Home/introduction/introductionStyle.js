@@ -41,6 +41,7 @@ export const styles = {
   }),
   title: (theme) => ({
     fontWeight: "10",
+    fontSize: "80px",
     [theme.breakpoints.down("lg")]: {
       fontSize: "70px",
     },

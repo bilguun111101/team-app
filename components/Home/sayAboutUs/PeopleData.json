@@ -1,0 +1,26 @@
+[
+    {
+        "img": "https://static.wikia.nocookie.net/the-batman-universe/images/c/ca/Robert_Pattinson_The_Batman_Premiere.png/revision/latest/top-crop/width/360/height/360?cb=20220420052604",
+        "name": "Robert Pattinson",
+        "details": "Give everyone you work with—inside and outside your emoji, keep conversations focused in channels, and simplify all your communication into one place.",
+        "rate": 5
+    },
+    {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_z3vZe1P2WUg5XVm2O2WyUP4XhFg0mCPXWA&usqp=CAU",
+        "name": "Kevin Mitnick",
+        "details": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+        "rate": 5
+    },
+    {
+        "img": "https://m.media-amazon.com/images/M/MV5BOGMwNTFmMDQtY2FhMC00MDc5LWIzNzEtODc0NTA3OTAyZjhlXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg",
+        "name": "Sergey Brin",
+        "details": "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
+        "rate": 5
+    },
+    {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyuTseP2MwrXPWbEyeDF_hpJBxIDWzq-9uEA&usqp=CAU",
+        "name": "Dennis M. Ritchie",
+        "details": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+        "rate": 5
+    }
+]

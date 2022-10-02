@@ -1,15 +1,16 @@
 export const styles = {
   yourHubSection: (theme) => ({
     width: "100vw",
-    height: "100vh",
+    height: "auto",
     display: "flex",
+    paddingTop: "6em",
     paddingLeft: "140px",
     alignItems: "center",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       paddingLeft: "20px",
-      paddingTop: "4em",
-      paddingBottom: "4em",
+      paddingTop: "6em",
+      height: "auto",
     },
   }),
   yourHubDocument: (theme) => ({

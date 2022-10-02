@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Products",
+        "path": ""
+    },
+    {
+        "name": "Services",
+        "path": ""
+    },
+    {
+        "name": "Contact",
+        "path": ""
+    },
+    {
+        "name": "Log in",
+        "path": "/logIn"
+    }
+]
