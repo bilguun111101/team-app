@@ -4,9 +4,10 @@ import Detail from "../components/Detail/Detail";
 const detail = () => {
   return (
     <Box>
-        <Detail />
+      <Detail />
+      {/* <p>aaaa</p> */}
     </Box>
-  )
-}
+  );
+};
 
-export default detail
+export default detail;
