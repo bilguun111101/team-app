@@ -30,4 +30,56 @@ export const styles = {
       fontSize: "40px",
     },
   }),
+  name: (theme) => ({
+    color: "#6d7d8b",
+    fontSize: "14px",
+  }),
+  chatInput: (theme) => ({
+    gap: "1em",
+    width: "100%",
+    display: "flex",
+    marginTop: "1em",
+  }),
+  writedBySection: (theme) => ({
+    gap: "1em",
+    width: "90%",
+    display: "flex",
+    alignItems: "center",
+  }),
+  avatarAndName: (theme) => ({
+    gap: "2px",
+    display: "flex",
+    flexDirection: "column",
+  }),
+  date: (theme) => ({
+    gap: "1.5em",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+  }),
+  dash: (theme) => ({
+    height: "1px",
+    backgroundColor: "silver",
+    width: "90%",
+  }),
+  image: (theme) => ({
+    width: "50%",
+    [theme.breakpoints.down("lg")]: {
+      width: "60%",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "80%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  }),
+  chatOutSection: (theme) => ({
+    width: "100%",
+    height: "auto",
+  }),
+  sendButton: (theme) => ({
+    display: "flex",
+    justifyContent: "flex-start",
+  }),
 };
