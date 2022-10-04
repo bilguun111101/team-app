@@ -15,13 +15,12 @@ const ContainerSection = (props) => {
         setDetail(propsy);
       }}
     >
-      <CardMedia component="img" image={propsy.picture} />
+      <CardMedia component="img" image={propsy.image} />
       <Box sx={styles.documentSection}>
-        <Typography variant="h6">{propsy.title}</Typography>
+        <Typography variant="h6">{propsy.text}</Typography>
         <Box sx={styles.write}>
           <Typography variant="p" sx={{ fontSize: "14px" }}>
-            There are times when our work impacts us deeply — sometimes in ways
-            we neither acknowledge nor understand
+            tags: {propsy.tags}
           </Typography>
         </Box>
         <Box
@@ -32,15 +31,15 @@ const ContainerSection = (props) => {
             alignItems: "center",
           }}
         >
-          <Avatar />
+          <Avatar alt={propsy.owner.firstName} src={propsy.owner.picture} />
           <Typography variant="p" sx={styles.greyWord}>
-            {`${propsy.firstName} ${propsy.lastName}`}
+            {`${propsy.owner.firstName} ${propsy.owner.lastName}`}
           </Typography>
           <Typography variant="p" sx={styles.greyWord}>
             |
           </Typography>
           <Typography variant="p" sx={styles.greyWord}>
-            2nd january 2022
+            {propsy.publishDate}
           </Typography>
         </Box>
       </Box>

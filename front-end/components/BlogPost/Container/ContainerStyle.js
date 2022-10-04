@@ -5,6 +5,9 @@ export const styles = {
     minWidth: "300px",
     minHeight: "370px",
     borderRadius: "2em",
+    "&:hover": {
+      boxShadow: "0 0 20px #000",
+    },
   }),
   documentSection: (theme) => ({
     width: "100%",

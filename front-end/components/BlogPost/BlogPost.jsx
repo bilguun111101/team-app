@@ -1,14 +1,14 @@
-import ContainerSection from "./Container/Container";
 import { Box, Typography, Card, CardMedia, Avatar } from "@mui/material";
-import img from "../BlogPost/Container/Rectangle.png";
-import { styles } from "./BlogStyle";
-import _ from "lodash";
 import useGetDataFromApi from "../../customHook/GetDataFromApi";
+import img from "../BlogPost/Container/Rectangle.png";
+import ContainerSection from "./Container/Container";
+import { styles } from "./BlogStyle";
+import { useEffect } from "react";
+import _ from "lodash";
+import axios from "axios";
 
 const BlogPost = () => {
-  const array = Array.from(Array(10).keys());
-  const saveData = useGetDataFromApi("https://dummyapi.io/data/v1/post");
-  console.log(saveData);
+  const saveData = useGetDataFromApi("http://localhost:8000/users");
   return (
     <Box sx={styles.blogPostPage}>
       <Box>
