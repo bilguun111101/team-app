@@ -1,11 +1,8 @@
-import { Box, Typography, Card, CardMedia, Avatar } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import useGetDataFromApi from "../../customHook/GetDataFromApi";
-import img from "../BlogPost/Container/Rectangle.png";
 import ContainerSection from "./Container/Container";
 import { styles } from "./BlogStyle";
-import { useEffect } from "react";
 import _ from "lodash";
-import axios from "axios";
 
 const BlogPost = () => {
   const saveData = useGetDataFromApi("http://localhost:8000/users");

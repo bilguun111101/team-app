@@ -2,6 +2,7 @@ import { Avatar, Box, Card, CardMedia, Typography } from "@mui/material";
 import { useDetailContext } from "../../../context/detailsContext";
 import { styles } from "./ContainerStyle";
 import { useRouter } from "next/router";
+import _ from "lodash";
 
 const ContainerSection = (props) => {
   const propsy = props.data;
@@ -20,7 +21,7 @@ const ContainerSection = (props) => {
         <Typography variant="h6">{propsy.text}</Typography>
         <Box sx={styles.write}>
           <Typography variant="p" sx={{ fontSize: "14px" }}>
-            tags: {propsy.tags}
+            tags: {_.join(propsy.tags, ", ")}
           </Typography>
         </Box>
         <Box
