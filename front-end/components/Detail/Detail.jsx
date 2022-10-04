@@ -8,7 +8,7 @@ const Detail = () => {
   return (
     <Box sx={styles.detailPage}>
       <Typography variant="h2" sx={styles.title}>
-        10 Secrets for managing a remote team{" "}
+        {detail.text}
       </Typography>
       <Box
         sx={{
@@ -18,18 +18,18 @@ const Detail = () => {
           alignItems: "center",
         }}
       >
-        <Avatar />
+        <Avatar alt={detail.owner.firstName} src={detail.owner.picture} />
         <Typography variant="p" sx={{ color: "#6d7d8b", fontSize: "14px" }}>
-          Shedrack eze
+          {`${detail.owner.firstName} ${detail.owner.lastName}`}
         </Typography>
         <Typography variant="p" sx={{ color: "#6d7d8b", fontSize: "14px" }}>
           |
         </Typography>
         <Typography variant="p" sx={{ color: "#6d7d8b", fontSize: "14px" }}>
-          2nd January
+          {detail.publishDate}
         </Typography>
       </Box>
-      <CardMedia component="img" image={img.src} sx={{ width: "100%" }} />
+      <CardMedia component="img" image={detail.image} sx={{ width: "100%" }} />
       <Typography variant="p" sx={{ color: "#000", width: "90%" }}>
         If you’re thinking of starting a blog of your own, but just don’t have a
         clue on what to blog about, then fear not! In this article, I have
@@ -60,13 +60,13 @@ const Detail = () => {
       <Box
         sx={{ width: "90%", display: "flex", alignItems: "center", gap: "1em" }}
       >
-        <Avatar />
+        <Avatar alt={detail.owner.firstName} src={detail.owner.picture} />
         <Box sx={{ flexDirection: "column", display: "flex", gap: "2px" }}>
           <Typography variant="p" sx={{ color: "#000", fontSize: "13px" }}>
             Written by
           </Typography>
           <Typography variant="p" sx={{ fontSize: "17px", color: "#000" }}>
-            Shedrack Eze
+            {`${detail.owner.firstName} ${detail.owner.lastName}`}
           </Typography>
           <Typography variant="p" sx={{ color: "#989898", fontSize: "13px" }}>
             CEO Team App
