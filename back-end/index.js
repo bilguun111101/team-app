@@ -1,9 +1,7 @@
-const _ = require("lodash");
-const usersRoutes = require("./Route/users");
-
 const data = require("./data.json");
 const express = require("express");
 const cors = require("cors");
+const _ = require("lodash");
 const port = 8000;
 
 const app = express();

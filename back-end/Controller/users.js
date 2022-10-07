@@ -1,8 +1,6 @@
-const users = [
-  { id: 1, firstName: "Saraa", lastName: "Naraa" },
-  { id: 2, firstName: "Orgil", lastName: "Tumur" },
-];
+const User = require("../models/users");
 
-exports.getUsers = (request, response) => {
-  response.status(200).json({ users });
-};
+exports.getUserData = async (req, res) => {
+  const users = await User.find();
+  res.status(200).json({ data: "get request is coming!" });
+}
