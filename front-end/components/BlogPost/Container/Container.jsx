@@ -12,7 +12,7 @@ const ContainerSection = (props) => {
     <Card
       sx={styles.cardSection}
       onClick={() => {
-        router.push("/detail");
+        router.push(`/blogPost/${propsy.id}`);
         setDetail(propsy);
       }}
     >
