@@ -23,11 +23,13 @@ app.put("/", (req, res) => {
 
 app.delete("/users/:id", (req, res) => {
   const { id } = req.params;
-  const deleteApi = _.find(data.data, { id: id });
-  if (deleteApi) {
-    const dataApi = _.filter(data.data, (el, idx) => el.id !== id);
-  }
+  // const deleteApi = _.find(data.data, { id: id });
+  // res.status(200).send(deleteApi);
+  // if (deleteApi) {
+  //   const dataApi = _.filter(data.data, (el, idx) => el.id !== id);
+  // }
 });
+
 
 app.listen(port, () => {
   console.log(`localhost:${port}/users`);

@@ -1,17 +1,25 @@
-import { Box, Typography } from "@mui/material";
-import useGetDataFromApi from "../../customHook/GetDataFromApi";
 import ContainerSection from "./Container/Container";
+import { instance } from "../../customHook/instance";
+import { Box, Typography } from "@mui/material";
 import { styles } from "./BlogStyle";
+import { useEffect } from "react";
+import { useState } from "react";
 import _ from "lodash";
 
+
 const BlogPost = () => {
-  const saveData = useGetDataFromApi("http://localhost:8000/users");
+  const [saveData, setSaveData] = useState();
+  useEffect(() => {
+    (async () => {
+      await instance.get("/users").then((res) => setSaveData(res.data.data));
+    })()
+  }, [])
   return (
     <Box sx={styles.blogPostPage}>
       <Box>
         <Typography variant="h3" sx={{ color: "#000", fontWeight: "10" }}>
           Blog posts
-        </Typography>
+        </Typography> 
         <Typography variant="p" sx={styles.introduction}>
           Our latest updates and blogs about managing your team
         </Typography>
