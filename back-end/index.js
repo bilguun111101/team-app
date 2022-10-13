@@ -9,27 +9,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/users", (req, res) => {
-  res.status(200).json(data);
-});
 
-app.post("/", (req, res) => {
-  res.send("Post request is successfully");
-});
+// Posts Section ******^^^^^^^********
 
-app.put("/", (req, res) => {
-  res.send("Put equest is successfully");
-});
+const postsRouter = require("./Route/post");
+app.use("/posts", postsRouter);
 
-app.delete("/users/:id", (req, res) => {
-  const { id } = req.params;
-  // const deleteApi = _.find(data.data, { id: id });
-  // res.status(200).send(deleteApi);
-  // if (deleteApi) {
-  //   const dataApi = _.filter(data.data, (el, idx) => el.id !== id);
-  // }
-});
 
+
+// ------------- Posts Section --------------- //
 
 app.listen(port, () => {
   console.log(`localhost:${port}/users`);

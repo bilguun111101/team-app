@@ -11,7 +11,7 @@ const BlogPost = () => {
   const [saveData, setSaveData] = useState();
   useEffect(() => {
     (async () => {
-      await instance.get("/users").then((res) => setSaveData(res.data.data));
+      await instance.get("/posts").then((res) => setSaveData(res.data.data));
     })()
   }, [])
   return (

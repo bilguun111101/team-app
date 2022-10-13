@@ -1,5 +1,4 @@
 import { Avatar, Box, Card, CardMedia, Typography } from "@mui/material";
-import { useDetailContext } from "../../../context/detailsContext";
 import { styles } from "./ContainerStyle";
 import { useRouter } from "next/router";
 import _ from "lodash";
@@ -7,13 +6,11 @@ import _ from "lodash";
 const ContainerSection = (props) => {
   const propsy = props.data;
   const router = useRouter();
-  const { setDetail } = useDetailContext();
   return (
     <Card
       sx={styles.cardSection}
       onClick={() => {
-        router.push(`/blogPost/${propsy.id}`);
-        setDetail(propsy);
+        router.push(`/BlogPost/${propsy.id}`);
       }}
     >
       <CardMedia component="img" image={propsy.image} />
