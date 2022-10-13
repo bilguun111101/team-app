@@ -1,23 +1,34 @@
 import { Box, List, Typography } from "@mui/material";
-import { useDetailContext } from "../../context/detailsContext";
+import { styles } from "./Detail/DetailStyle";
 import { useState, useRef } from "react";
-import { styles } from "./DetailStyle";
-import Chat from "./Chat";
+import { useRouter } from "next/router";
+import Chat from "./Detail/Chat";
 import _ from "lodash";
-import Image from "./Build/Image/Image";
-import HeaderDate from "./Build/HeaderDate/HeaderDate";
-import WritedBy from "./Build/WritedBy/WritedBy";
-import CommentInput from "./Build/commentInput.jsx/CommentInput";
+import Image from "./Detail/Build/Image/Image";
+import WritedBy from "./Detail/Build/WritedBy/WritedBy";
+import HeaderDate from "./Detail/Build/HeaderDate/HeaderDate";
+import CommentInput from "./Detail/Build/commentInput.jsx/CommentInput";
+
+import { instance } from "../../customHook/instance";
+import { useEffect } from "react";
 
 const Detail = () => {
-  const { detail } = useDetailContext();
-  const chat = useRef(null);
   const [chats, setChats] = useState([]);
+  const [detail, setDetail] = useState({});
+  const chat = useRef(null);
+  const router = useRouter();
+  const path = router.query.detail;
 
   const sendChat = () => {
     setChats([...chats, chat.current.value]);
     chat.current.value = "";
   };
+
+  useEffect(() => {
+    (async () => {
+      await instance.get(`/posts/${path}`).then(res => setDetail(res.data[0]))
+    })()
+  }, [])
 
   return (
     <Box sx={styles.detailPage}>
@@ -43,7 +54,7 @@ const Detail = () => {
             <Chat text={chat} key={idx} />
           ))}
         </List>
-      </Box>
+      </Box> 
     </Box>
   );
 };
